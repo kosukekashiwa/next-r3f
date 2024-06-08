@@ -1,3 +1,5 @@
+# next-r3f
+
 ## Getting Started
 
 First, run the development server:
@@ -10,4 +12,3 @@ npm run dev
 
 - React Three Fiber
 - Radix UI
-# next-r3f
