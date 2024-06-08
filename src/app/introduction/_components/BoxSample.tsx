@@ -39,19 +39,19 @@ const BoxSample: React.FC = () => {
   };
 
   return (
-    <Canvas
-      style={{
-        width: "100%",
-        height: "100%",
-        // position: "fixed",
-        // top: 0,
-        // left: 0,
-      }}
-    >
-      {/* 3D シーンに影の明るさを決定する環境光 */}
-      <ambientLight />
-      {/* 物体の立体感を表現するポイントライト */}
-      <pointLight position={[10, 10, 10]} />
+    <Canvas>
+      {/* アンビエントライト */}
+      <ambientLight intensity={Math.PI / 2} />
+      {/* スポットライト */}
+      <spotLight
+        position={[10, 10, 10]}
+        angle={0.15}
+        penumbra={1}
+        decay={0}
+        intensity={Math.PI}
+      />
+      {/* ポイントライト */}
+      <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
       {/* 最初に定義したBoxを2つ配置 */}
       <Box position={[-1.2, 0, 0]} />
       <Box position={[1.2, 0, 0]} />
