@@ -18,16 +18,16 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Providers>
+      <Providers>
+        <body className={inter.className}>
           <header className="sticky top-0 py-3">
             <AppNavigationMenu />
           </header>
           <main className="border-solid border-2 border-indigo-600">
             {children}
           </main>
-        </Providers>
-      </body>
+        </body>
+      </Providers>
     </html>
   );
 };
